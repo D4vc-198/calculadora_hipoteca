@@ -6,7 +6,10 @@ function App() {
     <div className="App">
       <Navbar />
       <Container maxWidth="xl" sx={{ marginTop: 4 }}>
-        <Grid container spacing={5} alignItems="center"></Grid>
+        <Grid container spacing={5} alignItems="center">
+          <Grid item xs={12} md={6}></Grid>
+          <Grid item xs={12} md={6}></Grid>
+        </Grid>
       </Container>
     </div>
   );
