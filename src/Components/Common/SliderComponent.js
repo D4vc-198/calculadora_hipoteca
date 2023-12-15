@@ -4,7 +4,7 @@ const SliderComponent = (props) => {
     const {defaultValue, min, max, label, unit, onChange, amount, value, steps} = props
 
     return (
-        <Stack my={1.4}></Stack>
+        <Stack gap={1}></Stack>
     )
 }
 
