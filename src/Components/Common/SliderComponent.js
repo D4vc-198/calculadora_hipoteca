@@ -32,7 +32,14 @@ const SliderComponent = (props) => {
         marks
         step={steps}
       />
-      <Stack direction="row" justifyContent="center"></Stack>
+      <Stack direction="row" justifyContent="center">
+        <Typography variant="caption" color="text.secondary">
+          {unit} {min}
+        </Typography>
+        <Typography variant="caption" color="text.secondary">
+          {unit} {max}
+        </Typography>
+      </Stack>
     </>
   );
 };
