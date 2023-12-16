@@ -3,8 +3,10 @@ import Navbar from "./Components/Navbar";
 import SliderSelect from "./Components/SliderSelect";
 import TenureSelect from "./Components/TenureSelect";
 import Result from "./Components/Result";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState({})
   return (
     <div className="App">
       <Navbar />
