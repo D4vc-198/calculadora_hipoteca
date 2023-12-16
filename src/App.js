@@ -20,7 +20,7 @@ function App() {
       <Container maxWidth="xl" sx={{ marginTop: 4 }}>
         <Grid container spacing={5} alignItems="center">
           <Grid item xs={12} md={6}>
-            <SliderSelect />
+            <SliderSelect data={data} setData={setData}/>
             <TenureSelect />
           </Grid>
           <Grid item xs={12} md={6}>
