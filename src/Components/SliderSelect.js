@@ -61,6 +61,23 @@ const SliderSelect = (props) => {
         label="Loan Amount"
         value={data.loanAmount}
       />
+
+      <SliderComponent
+        onChange={(e, value) => {
+          setData({
+            ...data,
+            interestRate: value,
+          });
+        }}
+        defaultValue={data.interestRate}
+        min={2}
+        max={18}
+        steps={0.5}
+        unit="%"
+        amount={data.interestRate}
+        label="Interest Rate"
+        value={data.interestRate}
+      />
     </>
   );
 };
