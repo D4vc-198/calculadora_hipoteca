@@ -1,7 +1,9 @@
-const Result = () => {
-    return (
-        <p>Result</p>
-    )
-}
+import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 
-export default Result
+Chart.register(ArcElement, Tooltip, Legend);
+
+const Result = () => {
+  return <p>Result</p>;
+};
+
+export default Result;
