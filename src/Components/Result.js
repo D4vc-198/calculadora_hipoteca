@@ -13,7 +13,20 @@ const Result = (props) => {
       (1 + interestPerMonth) ** totalLoanMonths) /
     ((1 + interestPerMonth) ** totalLoanMonths - 1);
 
-    const totalInterestGenerated = monthlyPayment * totalLoanMonths - loanAmount
+  const totalInterestGenerated = monthlyPayment * totalLoanMonths - loanAmount;
+
+  const pieChartData = {
+    labels: ["Principle", "Interest"],
+    datasets: [
+      {
+        label: "Ratio of Principle and Interest",
+        data: [homeValue, totalInterestGenerated],
+        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+        borderWidth: 1,
+      },
+    ],
+  };
 
   return <p>Result</p>;
 };
