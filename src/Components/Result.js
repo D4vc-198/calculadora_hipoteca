@@ -1,9 +1,12 @@
+import { Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
+import { Pie } from "react-chartjs-2";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-const Result = (props) => {
-  const { homeValue, loanAmount, loanTerm, interestRate } = props;
+const Result = ({data}) => {
+  const { homeValue, loanAmount, loanTerm, interestRate } = data;
 
   const totalLoanMonths = loanTerm * 12;
   const interestPerMonth = interestRate / 100 / 12;
@@ -28,7 +31,18 @@ const Result = (props) => {
     ],
   };
 
-  return <p>Result</p>;
+  return (
+    <Stack gap={3}>
+        <Typography textAlign="center" variant="h5">
+            Monthly Payment: $ {monthlyPayment.toFixed(2)}
+        </Typography>
+        <Stack direction="row" justifyContent="center">
+            <div>
+                <Pie data={pieChartData} />
+            </div>
+        </Stack>
+    </Stack>
+  )
 };
 
 export default Result;
