@@ -10,7 +10,14 @@ const TenureSelect = (props) => {
     return (
         <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Tenure</InputLabel>
-        <Select />
+        <Select 
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={data.loanTerm}
+            label="Tenure"
+            defaultValue={5}
+            onChange={handleChange}
+        />
         </FormControl>
     )
 }
