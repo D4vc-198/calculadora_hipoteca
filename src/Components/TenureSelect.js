@@ -1,3 +1,5 @@
+import { FormControl, InputLabel } from "@mui/material"
+
 const TenureSelect = (props) => {
     const { data, setData } = props
 
@@ -6,7 +8,9 @@ const TenureSelect = (props) => {
     }
 
     return (
-        <p>TenureSelect</p>
+        <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Tenure</InputLabel>
+        </FormControl>
     )
 }
 
